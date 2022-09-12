@@ -11,30 +11,30 @@ import com.rockola06.RockolaO906.models.Genero;
 @Service
 public class GeneroCanServiceImpl implements GeneroCanService {
 
-@Autowired
-private GeneroDAO generodao;
+    @Autowired
+    private GeneroDAO generodao;
 
-@Override
-@Transactional (readOnly=false)
-public Genero save(Genero genero){
-return generodao.save(genero); 
-}
+    @Override
+    @Transactional(readOnly = false)
+    public Genero save(Genero genero) {
+        return generodao.save(genero);
+    }
 
-@Override
-@Transactional(readOnly=false)
-public void delete(Integer id){
-generodao.deleteById(id);
-}
+    @Override
+    @Transactional(readOnly = false)
+    public void delete(Integer id) {
+        generodao.deleteById(id);
+    }
 
-@Override
-@Transactional(readOnly=true)
-public Genero findById(Integer id){
-return generodao.findById(id).orElse(null);
-}
+    @Override
+    @Transactional(readOnly = true)
+    public Genero findById(Integer id) {
+        return generodao.findById(id).orElse(null);
+    }
 
-@Override
-@Transactional(readOnly=true)
-public List<Genero> findAll(){
-return (List<Genero>) generodao.findAll();
-}
+    @Override
+    @Transactional(readOnly = true)
+    public List<Genero> findAll() {
+        return (List<Genero>) generodao.findAll();
+    }
 }

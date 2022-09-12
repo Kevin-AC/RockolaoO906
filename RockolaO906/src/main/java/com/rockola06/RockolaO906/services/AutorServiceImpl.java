@@ -12,31 +12,31 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class AutorServiceImpl implements AutorService {
     
-@Autowired
-private AutorDAO autordao;
+    @Autowired
+    private AutorDAO autordao;
 
-@Override
-@Transactional (readOnly=false)
-public Autor save(Autor autor){
-return autordao.save(autor); 
-}
+    @Override
+    @Transactional(readOnly = false)
+    public Autor save(Autor autor) {
+        return autordao.save(autor);
+    }
 
-@Override
-@Transactional(readOnly=false)
-public void delete(Integer id){
-autordao.deleteById(id);
-}
+    @Override
+    @Transactional(readOnly = false)
+    public void delete(Integer id) {
+        autordao.deleteById(id);
+    }
 
-@Override
-@Transactional(readOnly=true)
-public Autor findById(Integer id){
-return autordao.findById(id).orElse(null);
-}
+    @Override
+    @Transactional(readOnly = true)
+    public Autor findById(Integer id) {
+        return autordao.findById(id).orElse(null);
+    }
 
-@Override
-@Transactional(readOnly=true)
-public List<Autor> findAll(){
-return (List<Autor>) autordao.findAll();
-}
+    @Override
+    @Transactional(readOnly = true)
+    public List<Autor> findAll() {
+        return (List<Autor>) autordao.findAll();
+    }
 
 }
