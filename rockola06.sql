@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-09-2022 a las 02:19:28
+-- Tiempo de generación: 13-09-2022 a las 23:56:48
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -33,6 +33,13 @@ CREATE TABLE `autor` (
   `apellidoAutor` varchar(100) COLLATE utf8mb4_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
+--
+-- Volcado de datos para la tabla `autor`
+--
+
+INSERT INTO `autor` (`idAutor`, `nombreAutor`, `apellidoAutor`) VALUES
+(1, 'Juanes', 'Vásquez');
+
 -- --------------------------------------------------------
 
 --
@@ -47,6 +54,13 @@ CREATE TABLE `cancion` (
   `fechaPublicacion` varchar(14) COLLATE utf8mb4_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
+--
+-- Volcado de datos para la tabla `cancion`
+--
+
+INSERT INTO `cancion` (`idCancion`, `nombreCancion`, `idAutor`, `idGenero`, `fechaPublicacion`) VALUES
+(1, 'Besos en guerra', 1, 1, '12/03/2000');
+
 -- --------------------------------------------------------
 
 --
@@ -57,6 +71,13 @@ CREATE TABLE `generocancion` (
   `idGenero` int(10) UNSIGNED NOT NULL,
   `genero` varchar(45) COLLATE utf8mb4_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `generocancion`
+--
+
+INSERT INTO `generocancion` (`idGenero`, `genero`) VALUES
+(1, 'Pop');
 
 --
 -- Índices para tablas volcadas
@@ -90,19 +111,19 @@ ALTER TABLE `generocancion`
 -- AUTO_INCREMENT de la tabla `autor`
 --
 ALTER TABLE `autor`
-  MODIFY `idAutor` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `idAutor` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `cancion`
 --
 ALTER TABLE `cancion`
-  MODIFY `idCancion` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `idCancion` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `generocancion`
 --
 ALTER TABLE `generocancion`
-  MODIFY `idGenero` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `idGenero` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restricciones para tablas volcadas
