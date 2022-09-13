@@ -9,12 +9,14 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "genero")
+@Table(name = "generocancion")
 public class Genero implements Serializable{
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idGenero")
     private Integer idGenero;
+    
     @Column(name = "genero")
     private String genero;
 

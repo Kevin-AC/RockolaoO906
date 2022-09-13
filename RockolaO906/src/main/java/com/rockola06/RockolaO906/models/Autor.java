@@ -16,11 +16,22 @@ public class Autor implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idAutor")
     private Integer idAutor;
+    
     @Column(name = "nombreAutor")
     private String nombreAutor;
+    
     @Column(name = "apellidoAutor")
     private String apellidoAutor;
 
+    public Autor() {
+    }
+
+    public Autor(Integer idAutor, String nombreAutor, String apellidoAutor) {
+        this.idAutor = idAutor;
+        this.nombreAutor = nombreAutor;
+        this.apellidoAutor = apellidoAutor;
+    }
+    
     public Integer getIdAutor() {
         return idAutor;
     }
