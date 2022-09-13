@@ -1,6 +1,6 @@
 package com.rockola06.RockolaO906.services;
 
-import com.rockola06.RockolaO906.services.repositories.GeneroDAO;
+import com.rockola06.RockolaO906.services.repositories.GeneroCanDAO;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,29 +12,29 @@ import com.rockola06.RockolaO906.interfaces.GeneroCanService;
 public class GeneroCanServiceImpl implements GeneroCanService {
 
     @Autowired
-    private GeneroDAO generodao;
+    private GeneroCanDAO generocandao;
 
     @Override
     @Transactional(readOnly = false)
     public Genero save(Genero genero) {
-        return generodao.save(genero);
+        return generocandao.save(genero);
     }
 
     @Override
     @Transactional(readOnly = false)
     public void delete(Integer id) {
-        generodao.deleteById(id);
+        generocandao.deleteById(id);
     }
 
     @Override
     @Transactional(readOnly = true)
     public Genero findById(Integer id) {
-        return generodao.findById(id).orElse(null);
+        return generocandao.findById(id).orElse(null);
     }
 
     @Override
     @Transactional(readOnly = true)
     public List<Genero> findAll() {
-        return (List<Genero>) generodao.findAll();
+        return (List<Genero>) generocandao.findAll();
     }
 }
