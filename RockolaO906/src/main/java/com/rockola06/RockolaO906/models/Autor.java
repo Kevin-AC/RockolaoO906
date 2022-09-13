@@ -39,5 +39,4 @@ public class Autor implements Serializable {
     public void setApellidoAutor(String apellidoAutor) {
         this.apellidoAutor = apellidoAutor;
     }
-
 }

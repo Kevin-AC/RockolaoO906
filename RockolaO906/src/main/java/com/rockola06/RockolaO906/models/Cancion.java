@@ -1,8 +1,6 @@
 package com.rockola06.RockolaO906.models;
 
-
 import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -32,10 +30,8 @@ public class Cancion implements Serializable {
         return idCancion;
     }
     
-
     public Cancion() {
     }
-
 
     public Cancion(Integer idCancion, Integer nombreCancion, Autor autor, Genero genero, Integer fechaPublicacion) {
         this.idCancion = idCancion;
@@ -44,7 +40,6 @@ public class Cancion implements Serializable {
         this.genero = genero;
         this.fechaPublicacion = fechaPublicacion;
     }
-
 
     public void setIdCancion(Integer idCancion) {
         this.idCancion = idCancion;
@@ -81,7 +76,4 @@ public class Cancion implements Serializable {
     public void setFechaPublicacion(Integer fechaPublicacion) {
         this.fechaPublicacion = fechaPublicacion;
     }
-        
-  
-
 }

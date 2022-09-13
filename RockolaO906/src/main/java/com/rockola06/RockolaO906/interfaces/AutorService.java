@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface AutorService {
     public Autor save(Autor autor);
-    public void delete (Integer id);
+    public void delete(Integer id);
     public Autor findById(Integer id);
-    public List<Autor> findAll ();    
+    public List<Autor> findAll();    
 }

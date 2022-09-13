@@ -38,5 +38,4 @@ public class AutorServiceImpl implements AutorService {
     public List<Autor> findAll() {
         return (List<Autor>) autordao.findAll();
     }
-
 }
