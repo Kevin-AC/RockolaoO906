@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-09-2022 a las 23:56:48
+-- Tiempo de generación: 14-09-2022 a las 03:58:20
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -38,7 +38,10 @@ CREATE TABLE `autor` (
 --
 
 INSERT INTO `autor` (`idAutor`, `nombreAutor`, `apellidoAutor`) VALUES
-(1, 'Juanes', 'Vásquez');
+(1, 'Diomedes', 'Díaz'),
+(3, 'Carlos', 'Vives'),
+(4, 'Michael Joseph', 'Jackson'),
+(5, 'Vicente', 'Fernández');
 
 -- --------------------------------------------------------
 
@@ -77,7 +80,10 @@ CREATE TABLE `generocancion` (
 --
 
 INSERT INTO `generocancion` (`idGenero`, `genero`) VALUES
-(1, 'Pop');
+(1, 'Pop'),
+(3, 'Vallenato'),
+(4, 'rock'),
+(5, 'ranchera');
 
 --
 -- Índices para tablas volcadas
@@ -111,19 +117,19 @@ ALTER TABLE `generocancion`
 -- AUTO_INCREMENT de la tabla `autor`
 --
 ALTER TABLE `autor`
-  MODIFY `idAutor` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idAutor` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `cancion`
 --
 ALTER TABLE `cancion`
-  MODIFY `idCancion` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idCancion` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `generocancion`
 --
 ALTER TABLE `generocancion`
-  MODIFY `idGenero` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idGenero` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Restricciones para tablas volcadas
