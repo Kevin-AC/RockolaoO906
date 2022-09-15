@@ -1,0 +1,121 @@
+:root{
+  --blanco:#ffffff;
+  --negro:#000000;
+  --Primario:#374c00;
+  --P-Dark:#192300;
+  --P-Light:#64782e;
+  --Fondo:#f5f5f5;
+
+}
+html{
+  font-size: 62.5%;
+  
+}
+body {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0;
+  font-size: 16px;
+  background-color:var(--Fondo);
+  font-family: 'Open Sans', sans-serif;
+}
+/*/contenedor principala de la navegacion*/
+.barra-nav{ 
+  background-color: var(--P-Dark);
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--blanco);
+  font-weight: 700;
+  padding:0 1rem;
+  
+}
+.footer {
+  margin-top: auto;
+}
+
+.titulo{
+  margin: 1rem;
+  font-size:xx-large;
+}
+.navegacion-prin a{
+  color: var(--blanco);
+  text-decoration: none;
+  padding:  2rem;
+}
+.navegacion-prin a:hover{
+  background-color:var(--P-Dark);
+  color: var(--P-Light);
+}
+
+/****************index********************************************/
+.cabecera{
+  background-color: #000000;
+  color: var(--blanco);
+
+}
+.centrar{
+  text-align: center;
+}
+
+.principal{
+  display: grid;
+  grid-template-columns: 300px auto 300px;
+  
+}
+
+.container1{
+  
+  background-color: var(--Primario);
+  
+}
+.container2{
+  display: grid;
+  grid-template-columns: 200px 200px ;
+  grid-template-rows: 200px;
+  justify-content: center;
+  margin-top: 7rem;
+}
+
+
+.container3{
+  background-color: var(--Primario);
+  
+
+}
+
+
+
+/*********************Hoja canciones******************************************/
+/****************Columnas genero y lista de canciones de ese genero************/
+.contenido{ /*clase contenedora principal de section contenido-1 y conteinido-2*/
+  display: grid;
+  height: 100%;
+}
+
+.center{/*div con h1 Generos*/
+  text-align: center;
+  background-color: var(--Primario);
+  color: var(--blanco);
+}
+
+.contenido-2{
+  background-color: var(--Fondo);
+}
+.cent2{
+  background-color: var(--Primario);
+}
+.centrarTabla{
+  margin: 0 2rem;
+}
+/*********************Hoja Genero******************************************/
+
+
+
+
