@@ -23,11 +23,11 @@ public class Cancion implements Serializable {
     private String nombreCancion;
     
     @ManyToOne
-    @JoinColumn(name = "idAutor") // foarenea
+    @JoinColumn(name = "idAutor") // foranea
     private Autor autor;
     
     @ManyToOne
-    @JoinColumn(name = "idGenero") // foraena}
+    @JoinColumn(name = "idGenero") // foranea
     private Genero genero;
     
     @Column(name = "fechaPublicacion")

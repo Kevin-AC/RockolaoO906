@@ -8,6 +8,7 @@ public class RockolaO906Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(RockolaO906Application.class, args);
+		System.out.println("Bienvenido a Rockola.com!");
 	}
 
 }

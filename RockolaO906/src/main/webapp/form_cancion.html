@@ -45,14 +45,14 @@
         <div class="row align-items-center mb-4">
             <span class="fw-bold w-auto">FORMULARIO DE CANCIONES</span>
         </div>
-        <div class="divider"></div>
         <div class="row">
-            <form class="mt-4" action="" method="POST">
+            <form class="mt-4" action="" onsubmit="" method="POST">
                 <div class="card">
                     <div class="card-header">
                         <h3>MÓDULO CANCIONES</h3>
                     </div>
                     <input type="hidden" id="cancion_id"/>
+
                     <div class="mb-3">
                         <label for="nombre_cancion" class="form-label"><b>Nombre Canción</b></label>
                         <input type="text" class="form-control" id="nombre_cancion" name="nombre_cancion" placeholder="El Rey"/>
@@ -60,12 +60,20 @@
 
                     <div class="mb-3">
                         <label for="AutorId" class="form-label"><b>Autor</b></label>
-                        <input type="text" class="form-control" id="AutorId" name="AutorId" placeholder="1"/>
+                        <label class="fw-bold" id="AutorId"></label>
+                        <br>
+                        <select id="listaAutor">
+                            <option value="">Seleccione un autor</option>
+                        </select>
                     </div>
 
                     <div class="mb-3">
                         <label for="GeneroId" class="form-label"><b>Género</b></label>
-                        <input type="text" class="form-control" id="GeneroId" name="GeneroId" placeholder="4"/>
+                        <label class="fw-bold" id="GeneroId"></label>
+                        <br>
+                        <select id="listaGen">
+                            <option value="">Seleccione un género</option>
+                        </select>
                     </div>
 
                     <div class="mb-3">
@@ -74,8 +82,8 @@
                     </div>
 
                     <div class="card-footer">
-                        <button type="button" id="btn_Guardar" class="btn btn-success" onclick="saveCancion()">Guardar</button>
-                        <button type="button" id="btn_Actualizar" class="btn btn-success" onclick="updateCancion()">Actualizar</button>
+                        <button type="button" id="btn_Guardar" class="btn btn-primary" onclick="saveCancion()">Guardar</button>
+                        <button type="button" id="btn_Actualizar" class="btn btn-primary" onclick="updateCancion()">Actualizar</button>
                     </div>
 
                 </div>
@@ -87,9 +95,24 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
 
-    <script></script>
-    <script></script>
-    <script></script>
+    <script src="js/request.js"></script>
+    <script src="js/cancion.js"></script>
+    <script>
+        window.onload = function() {
+            datosSelectAutor();
+            datosSelectGenero();
+
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('id') != null) {
+                loadCancion(urlParams.get('id'));
+                let btnGuardar = document.getElementById('btn_Guardar');
+                btnGuardar.disabled = true;
+            } else {
+                let btnUpdate = document.getElementById('btn_Actualizar');
+                btnUpdate.disabled = true;
+            }
+        };
+    </script>
 
 </body>
 </html>
