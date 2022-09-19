@@ -7,17 +7,16 @@ function loadDataAutor(){
          console.log(data);
          data.forEach((element,index)=> {
             table.innerHTML += `
-              <tr class="table-warning">
+              <tr>
                    <th>${element.idAutor}</th>
                    <td>${element.nombreAutor}</td>
                    <td>${element.apellidoAutor}</td>
                    <td>
-                        <button style="border-radius:20px;" type="button" class="btn btn-outline-success" onclick="window.location='form_autor.html?id=${element.idAutor}'" >Editar</button>
-                        <button style="border-radius:20px; " type="button" class="btn btn-outline-danger" onclick='deleteAutor(${element.idAutor})'>Eliminar</button>
+                        <button style="border-radius:20px;" type="button" class="btn btn-success" onclick="window.location='form_autor.html?id=${element.idAutor}'" >Editar</button>
+                        <button style="border-radius:20px; " type="button" class="btn btn-danger" onclick='deleteAutor(${element.idAutor})'>Eliminar</button>
                    </td>
               </tr>
               `
-           
          });
     }
     request.onerror = function(){

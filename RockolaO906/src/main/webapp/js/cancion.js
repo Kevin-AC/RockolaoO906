@@ -10,8 +10,8 @@ function loadDataCancion() {
                 <tr>
                     <th>${element.idCancion}</th>
                     <td>${element.nombreCancion}</td>
-                    <td>${element.autor.idAutor} ${element.autor.nombreAutor} ${element.autor.apellidoAutor}</td>
-                    <td>${element.genero.idGenero} ${element.genero.genero}</td>
+                    <td>${element.autor.nombreAutor} ${element.autor.apellidoAutor}</td>
+                    <td>${element.genero.genero}</td>
                     <td>${element.fechaPublicacion}</td>
                     <td>
                         <button style="border-radius: 20px;" type="button" class="btn btn-success" onclick="window.location = 'form_cancion.html?id=${element.idCancion}'">Editar</button>
