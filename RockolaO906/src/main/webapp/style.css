@@ -115,7 +115,6 @@ body {
   
      border-color:#5b5c64;
     */
-<<<<<<< HEAD
   border-style: solid;
   border-top: 5px;
   border-left: 2px;
@@ -169,7 +168,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   column-gap: 2rem;
   align-items: center;
-  padding: 2rem;
+  padding:0 2rem;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -211,38 +210,6 @@ body {
   font-weight: bold;
 }
 
-.card2 {
-  margin: 2rem;
-  padding: 1rem;
-  border-radius: 10px;
-  height: 40rem;
-  font-weight: bold;
-  background-image: url(./img/composition.jpg);
-  background-size: cover;
-
-}
-
-.card-body {
-  border-radius: 10px;
-  font-weight: bold;
-  padding: 0;
-}
-
-.card-title {
-  font-weight: bold;
-  padding: 10px;
-}
-
-.card-img-top {
-  border-radius: 10px;
-  height: 250px;
-}
-
-.btn {
-  border-radius: 7px;
-  font-size: medium;
-}
-
 /***************************************/
 .principal {
   border-radius: 10px;
@@ -267,180 +234,86 @@ body {
 .carousel-inner {
   font-weight: bolder;
   font-size: larger;
+  
 }
 
 .carousel-inner h2 {
-  font-weight: bold;
+  font-weight: bolder;  
+  
 }
-
-
+ 
 /**************************************************/
+
 .container h3 {
   color: var(--negro);
 }
 
 .container span {
   color: var(--blanco);
+  align-content: center;
+ 
 }
+/**************formulario tablas******************/
 
+.row span{
+  font-size: larger;
+  text-align: center;
+}
 .row label {
   color: var(--negro);
 }
+.row{
+  margin: 2rem 0;
+  
+}
+.mt-4 h3{
+  font-weight: bold;
+}
+/**imput style***/
+.mb-3{
+  padding: 0.5rem 2rem;
+  font-weight: bold;
 
+}
+.mb-3 input{
+  font-weight: bold;
+  font-size: medium;
+}
+.mb-3 select{
+  width: 25rem;
+}
+
+
+
+/**************************/
+.card{
+ background-color: #212529;
+
+}
+.card-header{
+  background-color:#232529 ;
+  padding: 1.5rem;
+}
+.card-footer{
+  padding:1rem 1rem;
+}
+.btn{
+  margin: 5px;
+  border-radius: 7px;
+  font-size: medium;
+}
+.card-footer button{
+  padding: 2 2rem;
+
+}
+.card h3 {
+  color: var(--blanco);
+}
+.card label{
+  color: var(--blanco);
+}
 .texto h1 {
   font-weight: 900;
 }
 
 /*******************************************************/
-=======
-    border-style: solid;
-    border-top: 5px;
-    border-left: 2px;
-    border-right: 2px;
-    border-color: #f4ff91;
-   
-  }
-  
-  
-  /***************************/
-  .centrar{ /*reutiluzable*/
-    text-align: center;
-  }
-    /****************index********************************************/
-  .contenedor {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    padding:3rem 0;
-    display: grid;
-    grid-template-rows: repeat(3,1fr);
-    gap: 2.5rem;
-    
-  }
-  
-  
-  .cuerpo-prin{
-    display: grid;
-    grid-template-rows: 5rem 2fr;
-    border-radius: 10px;
-    gap: 2rem;
-    background-image: url(./img/record.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .titulo2 .centrar{
-    color: var(--blanco);
-    margin: 2rem 0;
-  }
-  .titulo2 p{
-    font-family: 'Monoton', cursive;
-    font-size: 5rem;
-  }
-  .cuerpo{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    column-gap: 2rem;
-    align-items: center;
-    padding: 2rem;
-    background-repeat: no-repeat;
-    background-size: cover;
-  
-  }
-  .card {
-    border-radius: 10px;
-    min-height: 200px;
-    font-weight: bold;
-    margin: 2,5rem 0;
-    position: relative;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center center;	
-    color: var(--blanco);
-      
-  }
-  .card .texto{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding:20px;
-      
-  }
-  /**********************/
-  .cantantes{
-    padding-top: 5rem;
-    border-radius: 10px;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    column-gap: 2rem;
-    background-image: url(./img/21034617.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: var(--blanco);
-    font-weight: bold;
-  }
-  .card2{
-    margin: 2rem;
-    padding: 1rem;
-    border-radius: 10px;
-    height: 40rem;
-    font-weight: bold;
-    background-image: url(./img/composition.jpg);
-    background-size: cover;
-  
-  }
-  .card-body{
-    border-radius: 10px;
-    font-weight: bold;
-    padding: 0;
-  }
-  
-  .card-title{
-    font-weight: bold;
-    padding: 10px;
-  }
-  .card-img-top{
-    border-radius: 10px;
-    height: 250px;
-  }
-  .btn{
-    border-radius: 7px;
-    font-size: medium;
-  }
-  /***************************************/
-  .principal{
-    border-radius: 10px;
-    background-image: url(./img/spinning.jpg);
-    background-repeat: repeat;
-    background-size: cover;
-    color: var(--blanco);
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    align-items: center;
-    padding: 9rem;
-    justify-content: space-between;
-     
-  }
-  .cabecera-izq{
-    font-family: 'Monoton', cursive;
-    font-size: 50;
-  }
-    
-    
-  /**************************************************/
-  .container h3{
-    color: var(--negro);
-  }
-  .container span{
-    color: var(--blanco);
-  }
-  .row label{
-    color: var(--negro);
-  }
-  .texto h1{
-    
-    font-weight: 900;
-  }.table-warning {
-
-}
->>>>>>> 2cc7f4dabf506e305bddd7e85a547939fbf0231a
