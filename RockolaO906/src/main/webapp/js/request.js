@@ -1,6 +1,5 @@
-const url = "http://localhost:8080/"
-//"https://minticloud.uis.edu.co/c3s9grupo6/"
-
+const url = "https://minticloud.uis.edu.co/c3s9grupo6/"
+//"http://localhost:8080/"
 function sendRequest(endpoint, method, data) {
     let request = new XMLHttpRequest();
     request.open(method, url+endpoint);
