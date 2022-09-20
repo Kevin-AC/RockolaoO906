@@ -89,7 +89,7 @@ function updateAutor(){
         let request = sendRequest('autor/list/'+id,'PUT',data)
         console.log("actualizar autor "+request.response+" info "+ data)
         request.onload = function(){
-             window.location ='autor.html';
+            window.location ='autor.html';
         }
         request.onerror = function (){
             alert('Error al actualizar el autor')

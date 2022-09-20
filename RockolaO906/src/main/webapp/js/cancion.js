@@ -48,18 +48,21 @@ function loadCancion(idCancion) {
         fecha.value = data.fechaPublicacion;
     };
     request.onerror = function () {
-        alert('Error al recuperar la canción seleccionada');
+        alert('Error al recuperar los datos de la canción seleccionada');
     };
 }
 
 function deleteCancion(idCancion) {
-    var eliminar = window.confirm("Seguro de eliminar esa canción?");
+    var eliminar = window.confirm("Está seguro de eliminar esta canción?");
     if (eliminar === true) {
-        window.alert('Canción eliminada');
+        window.alert('Canción eliminada satisfactoriamente');
         let request = sendRequest('cancion/list/' + idCancion, 'DELETE', '');
         request.onload = function () {
             loadDataCancion();
         };
+        request.onerror= function(){
+            alert('Error al intentar eliminar la canción de id '+idCancion)
+        }
     }
 }
 
@@ -76,7 +79,7 @@ function saveCancion() {
 
     var save = window.confirm("Seguro de guardar esta canción?");
     if (save === true) {
-        window.alert('Canción guardada');
+        window.alert('Canción guardada exitosamente');
         let request = sendRequest('cancion/', 'POST', data);
         request.onload = function () {
             window.location = 'cancion.html';
@@ -102,7 +105,7 @@ function updateCancion() {
 
     var update = window.confirm("Seguro de actualizar esta canción?");
     if (update === true) {
-        window.alert('Canción actualizada');
+        window.alert('Canción actualizada satisfactoriamente');
         let request = sendRequest('cancion/list/' + id, 'PUT', data);
         request.onload = function () {
             window.location = 'cancion.html';
