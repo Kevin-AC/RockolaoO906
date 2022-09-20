@@ -57,7 +57,6 @@ function deleteAutor(idAutor){
     }
 }
 
-
 function saveAutor(){
     let name = document.getElementById('autor-name').value
     let apellido = document.getElementById('autor-apellido').value
@@ -65,9 +64,9 @@ function saveAutor(){
     
     var Save = window.confirm("Está seguro de guardar este autor?");
     if(Save === true){
-        window.alert('Autor guardado satisfactorianente');
+        window.alert('Autor guardado satisfactoriamente');
         let request = sendRequest('autor/','POST',crearAutor)
-        console.log("guardar autor "+request.response+" info "+crearAutor)
+        console.log("Guardar autor "+request.response+" info "+crearAutor)
         request.onload = function(){
              window.location ='autor.html';
         }
@@ -85,7 +84,7 @@ function updateAutor(){
          
     var Update = window.confirm("Está seguro de actualizar este autor?");
     if(Update === true){
-        window.alert('Autor actualizado satisfactorianente');
+        window.alert('Autor actualizado satisfactoriamente');
         let request = sendRequest('autor/list/'+id,'PUT',data)
         console.log("actualizar autor "+request.response+" info "+ data)
         request.onload = function(){

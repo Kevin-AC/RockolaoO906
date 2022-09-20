@@ -59,7 +59,7 @@ function saveGenero(){
     let crearGenero = {'genero':genero} 
     var Save = window.confirm("Está seguro de guardar este género?");
     if(Save === true){
-        window.alert('Género guardado satisfactorianente');
+        window.alert('Género guardado satisfactoriamente');
         let request = sendRequest('generocancion/','POST',crearGenero)
         console.log("guardar género "+request.response+" info "+crearGenero)
         request.onload = function(){
@@ -76,15 +76,15 @@ function updateGenero(){
     let genero = document.getElementById('genero').value
     let Data= {'idGenero':id, 'genero':genero} 
     var update = window.confirm("Está seguro de actualizar este género?");
-    if(Update=== true){
-        window.alert('Género actualizado satisfactorianente');
+    if(update=== true){
+        window.alert('Género actualizado satisfactoriamente');
         let request = sendRequest('generocancion/','POST',Data)
-        console.log("guardar género "+request.response+" info "+Data)
+        console.log("Guardar género "+request.response+" info "+Data)
         request.onload = function(){
              window.location ='Genero.html';
         }
         request.onerror = function (){
-            alert('Error al actualizar el género')
+            alert('Error al actualizar este género')
         }
     }
 }
